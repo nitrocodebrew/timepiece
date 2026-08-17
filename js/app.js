@@ -10,4 +10,7 @@ const UI = {
     timeContainer: $('.time'),
     currentTime: $('.current-time'),
     amPm: $('.am-pm'),
+    toggleFormat: $('.toggle-format'),
 };
+
+
