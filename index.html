@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Timepiece &rsaquo; Digital Clock</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital clock application powered by vanilla JavaScript.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/app.js" defer></script>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="date-container">
+                <time class="date" datetime="">
+                    <span class="week-day"></span>
+                    <span class="month-day"></span>
+                    <span class="year"></span>
+                </time>
+            </div>
+            <div class="time-container">
+                <time class="time" datetime="">
+                    <span class="current-time"></span>
+                    <small clqss="am-pm"></small>
+                </time>
+            </div>
+            <div class="format-time-toggler">
+                <input type="checkbox" class="toggle-format"> Use Military Time?
+            </div>
+            <div class="project-source-code">
+                <p>
+                    The source code for this project can be found on <a href="https://github.com/nitrocodebrew/timepiece" class="github-repo-link" title="View the GitHub repository for this project" target="_blank" rel="noopener noreferrer">GitHub</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
