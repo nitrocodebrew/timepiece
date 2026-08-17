@@ -63,16 +63,23 @@ const showDateTime = () => {
     const timestamp = new Date();
 
     const currentTime = [
-        formatHours(timestamp.getHours()),
+        formatHours(timestamp.getHours(), !UI.toggleFormat.checked),
         formatMinutes(timestamp.getMinutes()),
         formatSeconds(timestamp.getSeconds()),
     ];
 
-    const clockDisplay = currentTime.join(':');
-    
+    let clockDisplay = currentTime.join(':');
+    if(!UI.toggleFormat.checked) {
+        UI.amPm.classList.add('hidden');
+        clockDisplay += ` ${formatAmPm(timestamp.getHours())}`;
+    } else {
+        UI.amPm.classList.remove('hidden');
+    }
+
     updateDate(timestamp);
     updateTime(clockDisplay, timestamp);
 };
 
+UI.toggleFormat.addEventListener('change', showDateTime);
 showDateTime();
 setInterval(showDateTime, 1000);
