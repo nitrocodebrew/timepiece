@@ -1,6 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.current-time, .time-am-pm {
+    display: block;
+}
+
+.current-time {
+    font-size: clamp(4rem, 10vw, 10rem);
+}
+
+.time-am-pm {
+    font-size: 1.5rem;
+}
+
 .am-pm {
     display: block;
 }
+
 .am-pm.hidden {
     display: none;
 }
