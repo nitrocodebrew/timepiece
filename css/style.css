@@ -1,3 +1,11 @@
+:root {
+    
+    /** Typography */
+    --font-system-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body-copy: Commissioner, var(--font-system-stack);
+    --font-alternative: 'Varela Round', var(--font-system-stack);
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +18,35 @@
     box-sizing: border-box;
 }
 
+html {
+    font: 400 0.9rem/1.5 var(--font-body-copy);
+    background-color: #fcf9ee;
+    color: #8c8c8c;
+}
+
 body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    text-align: center;
+}
+
+a, a:link, a:visited {
+    font-weight: inherit;
+    text-decoration: none;
+    color: #60b0c4;
+}
+
+a:hover {
+    color: #1b1b1b;
+}
+
+a:active {
+    border-bottom: 1px dotted #c3c3c3;
+}
+
+time {
+    text-align: center;
 }
 
 .container {
@@ -21,16 +54,58 @@ body {
     padding: 1rem;
 }
 
+
+.date, .time {
+    border-radius: 12px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.25);
+}
+
+.date {
+    font-size: 0.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.15rem;
+    padding: 0.25rem 0;
+    display: block;
+}
+
+.month-day {
+    color: #fbfbfb;
+}
+
+.date-container {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #464646;
+}
+
 .current-time, .time-am-pm {
     display: block;
 }
 
+.time-container {
+    border: 2px solid #464646;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
 .current-time {
+    padding: 0.55rem;
+    font-family: var(--font-alternative);
     font-size: clamp(4rem, 10vw, 10rem);
+    line-height: 1.1;
+    border: 2px solid #dad8d4;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background-color: #fbfbfb;
 }
 
 .time-am-pm {
+    padding: 0.25rem;
     font-size: 1.5rem;
+    color: #cbcbcb;
+    text-align: right;
 }
 
 .am-pm {
@@ -39,4 +114,17 @@ body {
 
 .am-pm.hidden {
     display: none;
+}
+
+.format-time-toggler {
+    margin: 0.5rem 0;
+    cursor: pointer;
+}
+
+.project-source-code {
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
 }
