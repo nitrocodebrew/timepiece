@@ -55,7 +55,7 @@ const updateDate = timestamp => {
 };
 
 const updateTime = (clockDisplay, timestamp) => {
-    UI.timeContainer.textContent = clockDisplay;
+    UI.currentTime.textContent = clockDisplay;
     UI.timeContainer.dateTime = timestamp.toISOString();
 };
 
