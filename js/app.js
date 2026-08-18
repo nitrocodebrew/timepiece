@@ -55,7 +55,7 @@ const updateDate = timestamp => {
 };
 
 const updateTime = (clockDisplay, timestamp) => {
-    UI.currentTime.textContent = clockDisplay;
+    UI.currentTime.innerHTML = clockDisplay;
     UI.timeContainer.dateTime = timestamp.toISOString();
 };
 
@@ -71,7 +71,9 @@ const showDateTime = () => {
     let clockDisplay = currentTime.join(':');
     if(!UI.toggleFormat.checked) {
         UI.amPm.classList.add('hidden');
-        clockDisplay += ` ${formatAmPm(timestamp.getHours())}`;
+        clockDisplay += ` <div class="time-am-pm">
+                            ${formatAmPm(timestamp.getHours())}
+                        </div>`;
     } else {
         UI.amPm.classList.remove('hidden');
     }
